@@ -19,12 +19,22 @@ clearBtn.addEventListener(`click`, e => {
 
     if (num === null) {
         return;
-    } else if (num > 100 || num < 16) {
-        alert(`Please enter a number less than 100 and larger than 16`);
+    } else if (num > 100 || num < 15) {
+        alert(`Please enter a number less than 100 and larger than 15`);
         return;
     };
 
     container.innerHTML = ``;
-
-    console.log(num);
+    for (let i = 0; i < num; i++) {
+        const line = document.createElement(`div`);
+        line.classList.add(`line`);
+    
+        for (let i = 0; i < num; i++) {
+            const div = document.createElement(`div`);
+            div.classList.add(`grid`);
+            div.addEventListener(`mouseenter`, e => div.classList.add(`colored`));
+            line.append(div);
+        };
+        container.append(line);
+    };
 });
