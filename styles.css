@@ -2,15 +2,22 @@
     box-sizing: border-box;
 }
 
+#container {
+    margin: 0 auto;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
 .line {
+    flex-grow: 1;
     display: flex;
 }
 
 .grid {
     border: 1px solid black;
-    width: 30px;
-    height: 30px;
-    flex-shrink: 0;
+    flex-grow: 1;
 }
 
 .colored {
