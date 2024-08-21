@@ -17,9 +17,14 @@ const clearBtn = document.querySelector(`button`);
 clearBtn.addEventListener(`click`, e => {
     let num = prompt(`How many of squares per side for the new grid?`);
 
-    while (num > 100) {
-        num = prompt(`Please enter a number less than 100`);
+    if (num === null) {
+        return;
+    } else if (num > 100 || num < 16) {
+        alert(`Please enter a number less than 100 and larger than 16`);
+        return;
     };
+
+    container.innerHTML = ``;
 
     console.log(num);
 });

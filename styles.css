@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 
 body {
@@ -7,7 +8,23 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    padding-top: 40px;
+    background-color: red;
+    border: 20px solid white;
+    border-top: none;
+    border-bottom: 20px solid rgb(255, 97, 97);
+    height: 100vh;
+}
+
+h1 {
+    font-size: 50px;
+    font-family:cursive;
+    background: linear-gradient(90deg, rgb(255, 250, 224), 
+    rgb(118, 106, 14) 10%, rgb(255, 250, 224) 50%, 
+    rgb(118, 106, 14) 60%, rgb(255, 250, 224) 100%);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 1px black);
 }
 
 #container {
@@ -15,6 +32,9 @@ body {
     height: 600px;
     display: flex;
     flex-direction: column;
+    border: 5px inset rgba(0, 0, 0, 0.873);
+    border-radius: 30px;
+    overflow: hidden;
 }
 
 .line {
@@ -23,14 +43,23 @@ body {
 }
 
 .grid {
-    border: 1px solid black;
+    border: 1px solid rgb(148, 148, 148);
     flex-grow: 1;
+    background-color: white;
 }
 
 .colored {
-    background-color: pink;
+    background-color: black;
 }
 
 button {
     font-size: 20px;
+    border: 4px outset;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    box-shadow: 0 0 5px black;
+}
+
+button:active {
+    scale: 0.95;
 }
