@@ -12,3 +12,14 @@ for (let i = 0; i < 16; i++) {
     };
     container.append(line);
 };
+
+const clearBtn = document.querySelector(`button`);
+clearBtn.addEventListener(`click`, e => {
+    let num = prompt(`How many of squares per side for the new grid?`);
+
+    while (num > 100) {
+        num = prompt(`Please enter a number less than 100`);
+    };
+
+    console.log(num);
+});
