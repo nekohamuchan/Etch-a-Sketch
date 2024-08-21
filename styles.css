@@ -12,3 +12,7 @@
     height: 30px;
     flex-shrink: 0;
 }
+
+.colored {
+    background-color: pink;
+}
